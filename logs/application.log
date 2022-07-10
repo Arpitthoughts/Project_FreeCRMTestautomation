@@ -1,0 +1,6 @@
+13:03:43.242 [main] INFO  com.crm.qa.testcases.LoginPageTest - initialization method executed successfully to open the browser 
+13:03:43.255 [main] INFO  com.crm.qa.testcases.LoginPageTest - creating page object
+13:03:44.178 [main] INFO  com.crm.qa.testcases.LoginPageTest - browser closed
+13:05:08.845 [main] INFO  java.lang.Class - ********* Test case Verify_user_is_able_to_create_contact started ******
+13:05:23.146 [main] INFO  java.lang.Class - contact created successfully with Abhishek Kumar  Adidas Customer
+13:05:23.147 [main] INFO  java.lang.Class - ********* Test case Verify_user_is_able_to_create_contact completed *******
