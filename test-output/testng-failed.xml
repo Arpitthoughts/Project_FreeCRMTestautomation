@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="com.crm.qa.listener.ListenerTest"/>
   </listeners>
-  <test thread-count="5" name="Free CRM App Test Cases(failed)">
+  <test thread-count="5" parallel="methods" name="Free CRM App Test Cases(failed)">
     <classes>
       <class name="com.crm.qa.testcases.LoginPageTest">
         <methods>
@@ -13,6 +13,14 @@
           <include name="VerifyLoginPageTitleTest"/>
         </methods>
       </class> <!-- com.crm.qa.testcases.LoginPageTest -->
+      <class name="com.crm.qa.testcases.HomePageTest">
+        <methods>
+          <include name="VerifyusernameTest"/>
+          <include name="teardown"/>
+          <include name="setUp"/>
+          <include name="VerifycrmlogoTest"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.HomePageTest -->
     </classes>
   </test> <!-- Free CRM App Test Cases(failed) -->
 </suite> <!-- Failed suite [Free CRM Application Test Automation Test suite] -->

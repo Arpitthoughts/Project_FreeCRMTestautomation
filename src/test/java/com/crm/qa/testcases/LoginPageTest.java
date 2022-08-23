@@ -46,7 +46,7 @@ public class LoginPageTest extends Testbase {
 		try
 		{
 			
-			Assert.assertEquals(title, "Cogmento CRM");
+			Assert.assertEquals(title, "Cogmento RM");
 		
 		}
 		catch(Exception e)

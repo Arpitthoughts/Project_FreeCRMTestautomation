@@ -53,6 +53,7 @@ public class HomePageTest extends Testbase {
 		
 
 		contactobj = homepageobj.clickonContacts();
+		Assert.assertTrue(true);
 
 	}
 

@@ -17,6 +17,8 @@ import com.qa.ExtentReportListener.ExtentReportUtility;
 public class ListenerTest extends Testbase implements ITestListener {
 	ExtentTest test;
 	ExtentReports extent=ExtentReportUtility.getExtentReportObject();
+	ThreadLocal<ExtentTest> tl= new ThreadLocal<ExtentTest>();
+	
 	
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
@@ -24,6 +26,8 @@ public class ListenerTest extends Testbase implements ITestListener {
 		
 		System.out.println("test started" + methodname);
 		test=extent.createTest(methodname);
+		tl.set(test);
+		
 	}
 
 	public void onTestSuccess(ITestResult result) {
@@ -31,7 +35,7 @@ public class ListenerTest extends Testbase implements ITestListener {
        String methodname=result.getMethod().getMethodName();
 		
 		System.out.println("test is successfully executed" + methodname);
-		test.log(Status.PASS, "Test passed");
+		tl.get().log(Status.PASS, "Test passed");
 	}
 
 	public void onTestFailure(ITestResult result) {
@@ -39,9 +43,10 @@ public class ListenerTest extends Testbase implements ITestListener {
 		  String methodname=result.getMethod().getMethodName();
 			
 			System.out.println("test" + methodname+"is failed" );
-			test.fail(result.getThrowable());
+			tl.get().fail(result.getThrowable());
 			try {
-				TestUtil.takeScreenshotAtEndOfTest(methodname);
+				
+				tl.get().addScreenCaptureFromPath(TestUtil.takeScreenshotAtEndOfTest(methodname), result.getMethod().getMethodName());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

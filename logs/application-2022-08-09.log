@@ -1,0 +1,40 @@
+12:22:48.698 [TestNG-test=Free CRM App Test Cases-1] INFO  com.crm.qa.testcases.LoginPageTest - browser closed
+12:22:55.879 [TestNG-test=Free CRM App Test Cases-2] INFO  com.crm.qa.testcases.LoginPageTest - initialization method executed successfully to open the browser 
+12:22:55.879 [TestNG-test=Free CRM App Test Cases-2] INFO  com.crm.qa.testcases.LoginPageTest - creating page object
+12:22:56.765 [TestNG-test=Free CRM App Test Cases-2] INFO  com.crm.qa.testcases.LoginPageTest - browser closed
+12:24:15.440 [TestNG-test=Free CRM App Test Cases-1] INFO  com.crm.qa.testcases.LoginPageTest - calling initialization method to open the browser 
+12:24:39.692 [TestNG-test=Free CRM App Test Cases-1] INFO  com.crm.qa.testcases.LoginPageTest - initialization method executed successfully to open the browser 
+12:24:39.693 [TestNG-test=Free CRM App Test Cases-1] INFO  com.crm.qa.testcases.LoginPageTest - creating page object
+12:24:39.724 [TestNG-test=Free CRM App Test Cases-1] INFO  com.crm.qa.testcases.LoginPageTest - ************ Starting VerifyLoginPageTitleTest test case execution ************
+12:24:39.740 [TestNG-test=Free CRM App Test Cases-1] INFO  com.crm.qa.testcases.LoginPageTest - Login Page title received asCogmento CRM
+12:24:40.232 [TestNG-test=Free CRM App Test Cases-2] INFO  com.crm.qa.testcases.LoginPageTest - calling initialization method to open the browser 
+12:24:40.731 [TestNG-test=Free CRM App Test Cases-1] INFO  com.crm.qa.testcases.LoginPageTest - browser closed
+12:24:47.140 [TestNG-test=Free CRM App Test Cases-2] INFO  com.crm.qa.testcases.LoginPageTest - initialization method executed successfully to open the browser 
+12:24:47.140 [TestNG-test=Free CRM App Test Cases-2] INFO  com.crm.qa.testcases.LoginPageTest - creating page object
+12:24:48.012 [TestNG-test=Free CRM App Test Cases-2] INFO  com.crm.qa.testcases.LoginPageTest - browser closed
+12:25:28.831 [TestNG-test=Free CRM App Test Cases-1] INFO  com.crm.qa.testcases.LoginPageTest - calling initialization method to open the browser 
+12:25:42.317 [TestNG-test=Free CRM App Test Cases-1] INFO  com.crm.qa.testcases.LoginPageTest - initialization method executed successfully to open the browser 
+12:25:42.317 [TestNG-test=Free CRM App Test Cases-1] INFO  com.crm.qa.testcases.LoginPageTest - creating page object
+12:25:42.350 [TestNG-test=Free CRM App Test Cases-1] INFO  com.crm.qa.testcases.LoginPageTest - ************ Starting VerifyLoginPageTitleTest test case execution ************
+12:25:42.367 [TestNG-test=Free CRM App Test Cases-1] INFO  com.crm.qa.testcases.LoginPageTest - Login Page title received asCogmento CRM
+12:25:42.768 [TestNG-test=Free CRM App Test Cases-2] INFO  com.crm.qa.testcases.LoginPageTest - calling initialization method to open the browser 
+12:25:43.274 [TestNG-test=Free CRM App Test Cases-1] INFO  com.crm.qa.testcases.LoginPageTest - browser closed
+12:25:50.385 [TestNG-test=Free CRM App Test Cases-2] INFO  com.crm.qa.testcases.LoginPageTest - initialization method executed successfully to open the browser 
+12:25:50.386 [TestNG-test=Free CRM App Test Cases-2] INFO  com.crm.qa.testcases.LoginPageTest - creating page object
+12:25:51.318 [TestNG-test=Free CRM App Test Cases-2] INFO  com.crm.qa.testcases.LoginPageTest - browser closed
+12:26:11.626 [main] INFO  com.crm.qa.testcases.LoginPageTest - calling initialization method to open the browser 
+12:26:17.879 [main] INFO  com.crm.qa.testcases.LoginPageTest - initialization method executed successfully to open the browser 
+12:26:17.879 [main] INFO  com.crm.qa.testcases.LoginPageTest - creating page object
+12:26:17.921 [main] INFO  com.crm.qa.testcases.LoginPageTest - ************ Starting VerifyLoginPageTitleTest test case execution ************
+12:26:17.937 [main] INFO  com.crm.qa.testcases.LoginPageTest - Login Page title received asCogmento CRM
+12:26:18.723 [main] INFO  com.crm.qa.testcases.LoginPageTest - browser closed
+12:26:27.379 [main] INFO  com.crm.qa.testcases.LoginPageTest - calling initialization method to open the browser 
+12:26:32.806 [main] INFO  com.crm.qa.testcases.LoginPageTest - initialization method executed successfully to open the browser 
+12:26:32.806 [main] INFO  com.crm.qa.testcases.LoginPageTest - creating page object
+12:26:33.696 [main] INFO  com.crm.qa.testcases.LoginPageTest - browser closed
+15:31:05.730 [main] INFO  com.crm.qa.testcases.LoginPageTest - calling initialization method to open the browser 
+15:31:27.651 [main] INFO  com.crm.qa.testcases.LoginPageTest - initialization method executed successfully to open the browser 
+15:31:27.651 [main] INFO  com.crm.qa.testcases.LoginPageTest - creating page object
+15:31:27.703 [main] INFO  com.crm.qa.testcases.LoginPageTest - ************ Starting VerifyLoginPageTitleTest test case execution ************
+15:31:27.729 [main] INFO  com.crm.qa.testcases.LoginPageTest - Login Page title received asCogmento CRM
+15:31:28.412 [main] INFO  com.crm.qa.testcases.LoginPageTest - browser closed
