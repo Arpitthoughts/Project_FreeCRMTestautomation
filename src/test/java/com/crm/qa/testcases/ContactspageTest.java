@@ -3,7 +3,7 @@ package com.crm.qa.testcases;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -17,6 +17,7 @@ import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtil;
 
 public class ContactspageTest extends Testbase {
+	private WebDriver driver;
 	LoginPage loginpageobj;
 	Homepage homepageobj;
 	Contactspage contactobj;
@@ -32,11 +33,12 @@ public class ContactspageTest extends Testbase {
 	@BeforeMethod
 	public void setUp() throws InterruptedException {
 
-		intialization();
-		loginpageobj = new LoginPage();
+		Testbase.intialization();
+		driver = getDriver();
+		loginpageobj= new LoginPage(driver);
 		homepageobj = loginpageobj.login(prop.getProperty("username"), prop.getProperty("password"));
 		contactobj=homepageobj.clickonContacts();
-		Thread.sleep(3000L);
+		
 
 	}
 	
@@ -48,7 +50,7 @@ public class ContactspageTest extends Testbase {
 	}
 	
 	
-	@Test(priority=1,dataProvider="getCRMTestData")
+	@Test(dataProvider="getCRMTestData")
 	public void Verify_user_is_able_to_create_contact(String FirstName, String LastName, String Company, String Category) throws InterruptedException {
 		log.info("********* Test case Verify_user_is_able_to_create_contact started ******");
 		String contact_created=contactobj.Create_Contact(FirstName, LastName, Company,Category );

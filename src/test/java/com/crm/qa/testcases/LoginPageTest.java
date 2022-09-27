@@ -1,76 +1,67 @@
 package com.crm.qa.testcases;
 
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 
 import com.crm.qa.base.Testbase;
 import com.crm.qa.pages.Homepage;
 import com.crm.qa.pages.LoginPage;
 
 public class LoginPageTest extends Testbase {
+	private WebDriver driver;
 	LoginPage loginpageobj;
 	Homepage homepageobj;
+	private static Logger log = LogManager.getLogger(LoginPageTest.class.getName());
 
-	public static Logger log=LogManager.getLogger(LoginPageTest.class.getName());
-
-	
-	
 	LoginPageTest() {
 
 		super();
-		
+
 	}
 
 	@BeforeMethod
 	public void setup() throws InterruptedException {
 		log.info("calling initialization method to open the browser ");
-		intialization();
-		log.info("initialization method executed successfully to open the browser ");
-		log.info("creating page object");
-		loginpageobj = new LoginPage();
+		Testbase.intialization();
+		driver = getDriver();
+		loginpageobj = new LoginPage(driver);
 
 	}
 
-	@Test(priority = 1,invocationCount=1)
+	@Test(priority=1)
 	public void VerifyLoginPageTitleTest() {
 		log.info("************ Starting VerifyLoginPageTitleTest test case execution ************");
+
+		String title = loginpageobj.validateLoginPageTitle();
+		log.info("Login Page title received as" + title);
 		
-		String title=loginpageobj.validateLoginPageTitle();
-		log.info("Login Page title received as"+title);
-		try
-		{
-			
+
 			Assert.assertEquals(title, "Cogmento CRM");
+			log.info("Login Page title matched successfully");
 		
-		}
-		catch(Exception e)
-		{
-		log.error("error occured in test case VerifyLoginPageTitleTest " + e.getMessage());	
-		}
+		log.info("************ Completed VerifyLoginPageTitleTest test case execution ************");
 	}
 
-	
-	@Test(priority = 2)
+	@Test(priority=2)
 	public void VerifyLoginTest() throws InterruptedException {
-		homepageobj= loginpageobj.login(prop.getProperty("username"), prop.getProperty("password"));
-		Assert.assertTrue(true);
-	}
-	
+		log.info("************ Starting VerifyLoginTest test case execution ************");
 
-	
-	
+		homepageobj=loginpageobj.login(prop.getProperty("username"), prop.getProperty("password"));
+		String homePageTitle=homepageobj.getHomePageTitle();
+		log.info("homepage title page received as "+homePageTitle);
+		Assert.assertEquals(homePageTitle, "Cogmento CRM");
+		log.info("************ Completed VerifyLoginTest test case execution ************");
+	}
 
 	@AfterMethod
 	public void teardown() {
-
-		driver.quit();
-		log.info("browser closed");
+		getDriver().quit();
 	}
 
 }

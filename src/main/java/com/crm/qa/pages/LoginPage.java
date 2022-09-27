@@ -1,21 +1,17 @@
 package com.crm.qa.pages;
 
-
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
 import com.crm.qa.base.Testbase;
 
 
 public class LoginPage extends Testbase {
 	
-	
+private WebDriver driver;	
 	
 	
 	//creating object repositories
@@ -32,7 +28,9 @@ WebElement Loginbtn;
 
 //initializing the Pageobjects
 
-public LoginPage() {
+public LoginPage(WebDriver driver) {
+	
+	this.driver=driver;
 	
 PageFactory.initElements(driver, this);	
 }
@@ -64,7 +62,7 @@ password.sendKeys(pwd);
 
 
 driver.findElement(By.xpath("//div[text()='Login']")).click();
-return new Homepage();
+return new Homepage(driver);
 
 
 }

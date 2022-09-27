@@ -12,23 +12,21 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-
+import org.openqa.selenium.WebDriver;
 
 import com.crm.qa.base.Testbase;
 
 public class TestUtil extends Testbase {
-	
-	
-	public static long page_load_time_out=3000;
-	public static long implicitly_wait=30;
-	
-	
+
+
+	public static long page_load_time_out = 3000;
+	public static long implicitly_wait = 30;
+
 	public static String TESTDATA_SHEET_PATH = "D:\\E-Banking Automation Mini Project\\FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\testdata\\FreeCRM_testdata.xlsx";
 
 	static Workbook book;
 	static Sheet sheet;
-	
-	
+
 	public static Object[][] getTestData(String sheetName) {
 		FileInputStream file = null;
 		try {
@@ -55,12 +53,13 @@ public class TestUtil extends Testbase {
 		}
 		return data;
 	}
-	
-	
+
 	public static String takeScreenshotAtEndOfTest(String methodname) throws IOException {
-		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		String ss_path = System.getProperty("user.dir")+"/screenshots/" +methodname+ System.currentTimeMillis() + ".png";
+		File scrFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+		String ss_path = System.getProperty("user.dir") + "/screenshots/" + methodname + System.currentTimeMillis()
+				+ ".png";
 		FileUtils.copyFile(scrFile, new File(ss_path));
 		return ss_path;
 	}
+
 }
