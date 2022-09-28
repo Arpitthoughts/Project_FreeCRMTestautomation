@@ -1,0 +1,16 @@
+20:39:48.709 [TestNG-test=test-4] INFO  com.crm.qa.testcases.HomePageTest - calling initialization method to open the browser 
+20:39:48.709 [TestNG-test=test-2] INFO  com.crm.qa.testcases.HomePageTest - calling initialization method to open the browser 
+20:39:48.709 [TestNG-test=test-1] INFO  com.crm.qa.testcases.LoginPageTest - calling initialization method to open the browser 
+20:39:48.709 [TestNG-test=test-3] INFO  com.crm.qa.testcases.LoginPageTest - calling initialization method to open the browser 
+20:40:18.445 [TestNG-test=test-3] INFO  com.crm.qa.testcases.LoginPageTest - ************ Starting VerifyLoginTest test case execution ************
+20:40:24.451 [TestNG-test=test-1] INFO  com.crm.qa.testcases.LoginPageTest - ************ Starting VerifyLoginPageTitleTest test case execution ************
+20:40:24.538 [TestNG-test=test-1] INFO  com.crm.qa.testcases.LoginPageTest - Login Page title received asCogmento CRM
+20:40:24.547 [TestNG-test=test-1] INFO  com.crm.qa.testcases.LoginPageTest - Login Page title matched successfully
+20:40:24.548 [TestNG-test=test-1] INFO  com.crm.qa.testcases.LoginPageTest - ************ Completed VerifyLoginPageTitleTest test case execution ************
+20:40:30.565 [TestNG-test=test-3] INFO  com.crm.qa.testcases.LoginPageTest - homepage title page received as Cogmento CRM
+20:40:30.565 [TestNG-test=test-3] INFO  com.crm.qa.testcases.LoginPageTest - ************ Completed VerifyLoginTest test case execution ************
+20:40:32.255 [TestNG-test=test-2] INFO  com.crm.qa.testcases.HomePageTest - ************ Starting VerifyusernameTest test case execution ************
+20:40:34.541 [TestNG-test=test-4] INFO  com.crm.qa.testcases.HomePageTest - ************ Starting VerifycrmlogoTest test case execution ************
+20:40:37.622 [TestNG-test=test-2] INFO  com.crm.qa.testcases.HomePageTest - user name matched Arpit Arjaria
+20:40:37.623 [TestNG-test=test-2] INFO  com.crm.qa.testcases.HomePageTest - ************ Completed VerifyusernameTest test case execution ************
+20:40:39.382 [TestNG-test=test-4] INFO  com.crm.qa.testcases.HomePageTest - ************ Completed VerifycrmlogoTest test case execution ************
